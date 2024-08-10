@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: jellyfin-dp
+  name: jellyfin-dp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jellyfin-dp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: jellyfin-dp
+    spec:
+      containers:
+      - image: jellyfin/jellyfin
+        name: jellyfin
+        ports:
+        - containerPort: 8096
+        resources: {}
+status: {}
