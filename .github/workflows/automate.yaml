@@ -20,7 +20,9 @@ jobs:
         run: sudo apt update
       - run: sudo apt install snapd -y
       - name: Install microk8s on the system
-        run: sudo snap install microk8s --classic
+        run: |
+            sudo snap install microk8s --classic
+            sudo microk8s start
       - name: Writing to a file
         run: sudo microk8s status >> status.txt || true
       - run: cat status.txt
