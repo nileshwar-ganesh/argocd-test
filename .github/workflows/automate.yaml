@@ -18,7 +18,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Install snapd package manager
         run: sudo apt update
-        run: sudo apt install snapd -y
+      - run: sudo apt install snapd -y
       - name: Install microk8s on the system
         run: sudo snap install microk8s --classic
       - name: Writing to a file
