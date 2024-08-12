@@ -22,5 +22,5 @@ jobs:
       - name: Install microk8s on the system
         run: sudo snap install microk8s --classic
       - name: Writing to a file
-        run: microk8s status >> status.txt
+        run: sudo microk8s status >> status.txt
 
